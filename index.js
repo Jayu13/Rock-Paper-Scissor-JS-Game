@@ -1,6 +1,6 @@
 // StartMove Function
 
-function startMove(playerMove) { 
+function startMove(playerMove) {
   const actionSelect = ["scissor", "rock", "paper"];
   const computerMove = actionSelect[Math.floor(Math.random() * 3)];
   let humanMove = localStorage.setItem("humanMove", playerMove);
@@ -17,31 +17,36 @@ function startMove(playerMove) {
     let humanScore = parseInt(localStorage.getItem("humanScore")) || 0;
     humanScore++;
     localStorage.setItem("humanScore", humanScore);
+    animateWinner("humanImg");
   } else {
     localStorage.setItem("message", "Computer Wins!");
     let computerScore = parseInt(localStorage.getItem("computerScore")) || 0;
     computerScore++;
     localStorage.setItem("computerScore", computerScore);
+    animateWinner("pcImg");
   }
 }
 
 //-------------------------------------------------------------------
 //Animation Function
 
-function animateWinner(playerMove , computerMove){
-  let humanImg = document.getElementById('humanImg');
-  let pcImg = document.getElementById('pcImg');
-  console.log(humanImg)
-  console.log(pcImg)
-  if (  
-    (playerMove === 'rock' && computerMove === 'scissor') ||
-    (playerMove === 'paper' && computerMove === 'rock') ||
-    (playerMove === 'scissor' && computerMove === 'paper') 
+function animateWinner(playerMove, computerMove) {
+  let humanImg = document.getElementById("humanImg");
+  let pcImg = document.getElementById("pcImg");
+  console.log(humanImg);
+  console.log(pcImg);
+  console.log(playerMove);
+  console.log(computerMove);
+  if (
+    (playerMove === "rock" && computerMove === "scissor") ||
+    (playerMove === "paper" && computerMove === "rock") ||
+    (playerMove === "scissor" && computerMove === "paper")
   ) {
-    humanImg.classList.add('Winner-animation')
-  } else {
-    pcImg.classList.add('Winner-animation');
-  }
+    humanImg.classList.add("Winner-animation");
+  } else if (playerMove !== computerMove) {
+    pcImg.classList.add("Winner-animation");
+  } 
+  
 }
 
 //-------------------------------------------------------------------
@@ -66,7 +71,6 @@ function NextPage() {
   } else {
     document.getElementById("pcImg").src = "./orangeHand.png";
   }
-  
 }
 
 //-------------------------------------------------------------------
@@ -124,11 +128,16 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("ScoreCom").innerHTML = computerScore;
   NextPage();
   DisplayMessage();
-  animateWinner()
+  // animateWinner();
 });
 document.addEventListener("DOMContentLoaded", WinnerMessage);
 document.addEventListener("DOMContentLoaded", MainPageScore);
 document.addEventListener("DOMContentLoaded", StartOver);
+document.addEventListener("DOMContentLoaded", () => {
+  let playerMove = localStorage.getItem("humanMove");
+  let computerMove = localStorage.getItem("pcMove");
+  animateWinner(playerMove, computerMove);
+});
 
 //-------------------------------------------------------------------
 // Rule Button
@@ -158,5 +167,3 @@ btnRules.forEach((btn) => {
 btn.addEventListener("click", () => {
   btn.removeEventListener("click", HandlerClick);
 });
-
-
