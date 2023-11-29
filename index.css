@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100wh;
+  height: 100vh;
+  background-color: #8cc461;
+  display: flex;
+  justify-content: center;
+}
+
+.startScreen {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.scoreBox {
+  width: 40%;
+  height: 150px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+}
+
+.scoreBox h1 {
+  color: #fff;
+  font-size: 35px;
+}
+
+.yourScore {
+  width: 25%;
+  height: 120px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 10px;
+  position: absolute;
+  top: 8%;
+  left: 45%;
+  padding: 10px;
+}
+
+.computerScore {
+  float: right;
+  width: 25%;
+  height: 120px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  top: 8%;
+  left: 73%;
+  padding: 10px;
+}
+
+.yourScore h6,
+.computerScore h6 {
+  font-size: 20px;
+}
+
+.yourScore h3,
+.computerScore h3 {
+  font-size: 45px;
+}
+
+.triangleshape {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.triangleshape a:last-child {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+}
+
+.triangleshape a:first-child {
+  position: absolute;
+  top: 17.5%;
+  left: 60%;
+}
+
+.triangleshape a:nth-child(2) {
+  position: absolute;
+  top: 17.5%;
+  left: 0;
+}
+
+
+.Rules-div {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.Rules-div button {
+  padding: 8px 30px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: white;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.rules-content {
+  position: absolute;
+  top: -480%;
+  left: 82%;
+  background-color: #004429;
+  width: 300px;
+  height: 350px;
+  border-radius: 5px;
+  border: 4px solid #fff;
+  display: none;
+  padding: 30px 30px;
+}
+
+.rules-content h4 {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.rules-content ul li {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  list-style: square;
+}
+
+.rules-content ul li::marker {
+  color: #ffd600;
+}
+
+/* Frame2 */
+.GameScreen {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-game-screen {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.center-content {
+  color: #fff;
+  text-align: center;
+}
+
+.center-content h2 {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.center-content h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.center-content button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+/* WinnerSection */
+
+.inner-container {
+  margin-top: 60px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-container img {
+  width: 40%;
+}
+.inner-container h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+.inner-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all .3s ease;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.inner-container button:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+
+.Winner-animation{
+  border-radius: 350px;
+  background: linear-gradient(45deg, rgba(46, 154, 37, 0.39), rgba(46, 154, 37, 0.39),  rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 100%  1000%;
+  animation: animatedBackground 1s ease-out infinite;
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+

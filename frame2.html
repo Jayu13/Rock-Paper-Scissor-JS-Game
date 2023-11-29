@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Game Start</title>
+</head>
+<body>
+    <div class="container">
+        <div class="startScreen">
+            <div class="scoreBox">
+                <h1>Rock</h1>
+                <h1>Paper</h1>
+                <h1>Scissors</h1>
+                <div class="computerScore">
+                    <h6>Computer</h6>
+                    <h6>Score</h6>
+                    <h3 id="ScoreCom">0</h3>
+                </div>
+                <div class="yourScore">
+                    <h6>Your</h6>
+                    <h6>Score</h6>
+                    <h3 id="ScoreHum">0</h3>
+                </div>
+            </div>
+            <div class="GameScreen">
+                <div class="inner-game-screen">
+                    <img src="" alt="playermove" id="humanImg">
+                    <div class="center-content">
+                        <h2 id="message"></h2>
+                       <a href="./index.html" ><button class="Play-Again">PLAY AGAIN</button></a>
+                    </div>
+                    <img src="" alt="pcmove" id="pcImg">
+                </div>
+            </div>
+            <div class="Rules-div">
+                <div class="rules-content">
+                    <h4>Games Rules</h4>
+                    <ul>
+                        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                        <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                        <li>If both players lay down the same hand, each player lays down another hand</li>
+                    </ul>
+                </div>
+                <a href="./Winner.html"><button>See Winner</button></a>
+                <button id="rules">Rules</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="./index.js"></script>
+</html>
