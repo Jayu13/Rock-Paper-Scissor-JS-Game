@@ -33,10 +33,6 @@ function startMove(playerMove) {
 function animateWinner(playerMove, computerMove) {
   let humanImg = document.getElementById("humanImg");
   let pcImg = document.getElementById("pcImg");
-  console.log(humanImg);
-  console.log(pcImg);
-  console.log(playerMove);
-  console.log(computerMove);
   if (
     (playerMove === "rock" && computerMove === "scissor") ||
     (playerMove === "paper" && computerMove === "rock") ||
